@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from models import Subscriber
+from .models import Subscriber
 
 
 def subscriber_list():

@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from newsletter.views import subscriber_get
+
 urlpatterns = [
+    path('subscriber/1/', subscriber_get),
     path('admin/', admin.site.urls),
 ]
