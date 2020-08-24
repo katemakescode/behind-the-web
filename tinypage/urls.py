@@ -19,6 +19,6 @@ from django.urls import path
 from newsletter.views import subscriber_get
 
 urlpatterns = [
-    path('subscriber/1/', subscriber_get),
+    path('subscriber/<int:id_>/', subscriber_get),
     path('admin/', admin.site.urls),
 ]
