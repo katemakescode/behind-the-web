@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinyPage Subscriber</title>
+    {% load static %}
+</head>
+<body>
+    <img src="{% static "img/misty-mountain-tutin-unsplash-sm.jpg" %}" alt="Morning fog over the Mont-des-Granges in the French Alps.">
+    <h2>{{ subscriber.email_address }}</h2>
+
+    <span>Photo by <a href="https://unsplash.com/@adrientutinphoto?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Adrien Tutin</a> on <a href="https://unsplash.com/@katemakescode/likes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+</body>
+</html>
