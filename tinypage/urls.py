@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from newsletter.views import subscriber_get
+from newsletter.views import subscriber_get, subscriber_create
 
 urlpatterns = [
     path('subscriber/<int:id_>/', subscriber_get),
     path('admin/', admin.site.urls),
+    path('', subscriber_create),
 ]
+

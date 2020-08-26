@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
 
+from .forms import SubscriberForm
 from .models import Subscriber
 
 
@@ -14,11 +15,17 @@ def subscriber_get(request, id_=None, *args, **kwargs):
     except Subscriber.DoesNotExist:
         raise Http404
 
-    return render(request, 'get.html', {'subscriber': subscriber})
+    return render(request, 'subscriber.html', {'subscriber': subscriber})
 
 
-def subscriber_create():
-    pass
+def subscriber_create(request):
+    form = SubscriberForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        form = SubscriberForm()
+
+    return render(request, 'subscribe.html', {'form': form})
 
 
 def subscriber_update():

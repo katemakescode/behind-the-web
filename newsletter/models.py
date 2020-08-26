@@ -4,8 +4,16 @@ from django.db import models
 from django.utils import timezone
 
 
+class LCEmailField(models.EmailField):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def get_prep_value(self, value):
+        return str(value).lower()
+
+
 class Subscriber(models.Model):
-    email_address = models.EmailField()
+    email_address = LCEmailField(unique=True)
     created = models.DateTimeField('date subscribed', auto_now_add=True)
 
     def __str__(self):
