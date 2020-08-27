@@ -16,14 +16,11 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from account.views import register
-from newsletter.views import subscriber_get, subscriber_create
 
 urlpatterns = [
-    path('register/', register),
-    path('subscribe/', subscriber_create),
-    path('subscriber/<int:id_>/', subscriber_get),
+    path('account/', include('account.urls')),
+    path('newsletter/', include('newsletter.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
