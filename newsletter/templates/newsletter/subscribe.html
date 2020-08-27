@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Subscribe{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'newsletter/newsletter.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h2 class="secondary-color">Newsletter subscription</h2>
+
+    <form method="post"> {% csrf_token %}
+        {{ form.as_p }}
+        <p><input type="submit" value="Subscribe"></p>
+    </form>
+{% endblock %}
