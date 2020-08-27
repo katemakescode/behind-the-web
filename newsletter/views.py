@@ -15,7 +15,8 @@ def subscriber_get(request, id_=None, *args, **kwargs):
     except Subscriber.DoesNotExist:
         raise Http404
 
-    return render(request, 'subscriber.html', {'subscriber': subscriber})
+    return render(request, 'newsletter/subscriber.html', {'subscriber':
+                                                          subscriber})
 
 
 def subscriber_create(request):
@@ -25,7 +26,7 @@ def subscriber_create(request):
         form.save()
         form = SubscriberForm()
 
-    return render(request, 'subscribe.html', {'form': form})
+    return render(request, 'newsletter/subscribe.html', {'form': form})
 
 
 def subscriber_update():

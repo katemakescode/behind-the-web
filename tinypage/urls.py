@@ -21,8 +21,8 @@ from newsletter.views import subscriber_get, subscriber_create
 
 urlpatterns = [
     path('register/', register),
+    path('subscribe/', subscriber_create),
     path('subscriber/<int:id_>/', subscriber_get),
-    path('subscriber/', subscriber_create),
     path('admin/', admin.site.urls),
 ]
 
