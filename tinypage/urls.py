@@ -27,4 +27,3 @@ urlpatterns = [
     path('subscriber/<int:id_>/', subscriber_get),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-

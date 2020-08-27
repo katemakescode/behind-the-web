@@ -2,15 +2,11 @@
 {% load static %}
 
 {% block title %}Subscriber {{ subscriber.id }} {% endblock %}
-{% block stylesheets %}
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'newsletter/newsletter.css' %}">
-{% endblock %}
 
 {% block content %}
     <h4 class="secondary-color">{{ subscriber.email }} has subscribed</h4>
 
-    <img src="{% static "img/misty-mountain-tutin-unsplash-sm.jpg" %}"
+    <img src="{% static 'img/misty-mountain-tutin-unsplash-sm.jpg' %}"
          alt="Morning fog over the Mont-des-Granges in the French Alps.">
     <h6>Photo by <a
             href="https://unsplash.com/@adrientutinphoto?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Adrien
