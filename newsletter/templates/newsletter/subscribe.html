@@ -4,7 +4,7 @@
 {% block title %}Subscribe{% endblock %}
 
 {% block content %}
-    <h2 class="secondary-color">Newsletter subscription</h2>
+    <h3>Newsletter subscription</h3>
 
     <form method="post"> {% csrf_token %}
         {{ form.as_p }}

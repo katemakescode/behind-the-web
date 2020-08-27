@@ -1,3 +1,23 @@
-.secondary-color {
-    color: purple;
+body {
+    background-color: ghostwhite;
+}
+
+h3 {
+    color: dimgray;
+}
+
+h6 {
+    color: silver;
+}
+
+p {
+    color: gray;
+}
+
+a {
+    color: gray;
+}
+
+input {
+    color:dimgray;
 }
