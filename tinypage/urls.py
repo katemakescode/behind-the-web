@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from account.views import register
 from newsletter.views import subscriber_get, subscriber_create
 
 urlpatterns = [
+    path('register/', register),
     path('subscriber/<int:id_>/', subscriber_get),
+    path('subscriber/', subscriber_create),
     path('admin/', admin.site.urls),
-    path('', subscriber_create),
 ]
 
