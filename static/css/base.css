@@ -2,6 +2,10 @@ body {
     background-color: ghostwhite;
 }
 
+p {
+    color: gray;
+}
+
 h3 {
     color: dimgray;
 }
@@ -10,8 +14,10 @@ h6 {
     color: silver;
 }
 
-p {
+ul {
+    list-style: none;
     color: gray;
+    padding-left: 0;
 }
 
 a {

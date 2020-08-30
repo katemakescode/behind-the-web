@@ -20,6 +20,7 @@ def subscriber_get(request, id_=None, *args, **kwargs):
 
 
 def subscriber_create(request):
+    print(request.user, request.user.is_authenticated)
     form = SubscriberForm(request.POST or None)
 
     if form.is_valid():
