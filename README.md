@@ -17,31 +17,28 @@ The data is currently gleaned from [NZ Scorer](https://bridgenz.co.nz/scorer
 
 ## Roadmap
 * Bootstrap layout and styling (minimal)
-* test suite
-* deployment to Heroku and AWS
-* contact form  
-
+    * test suite
+    * deployment to Heroku
+    * contact form  
 
 * OverTrick REST API (and maybe GraphQL)
-* data scraping 
-* PBN upload/download
-* data generation
-* CLI
-* links to personal data
-* data analysis and charting 
-
+    * data scraping 
+    * PBN upload/download
+    * data generation
+    * CLI
+    * links to personal data
+    * data analysis and charting  
 
 * OverTrick member accounts
-* membership subscription and table money
-* partner requests
-* social sharing
-* ladders and tournaments
-* board and hand records
-
+    * membership subscription and table money
+    * partner requests
+    * social sharing
+    * ladders and tournaments
+    * board and hand records
 
 * Swag ecommerce
 
-
-* API Gateway
-* Lambda for data processing
-* CloudFormation
+* deployment to AWS
+    * API Gateway
+    * Lambda for data processing
+    * CloudFormation
