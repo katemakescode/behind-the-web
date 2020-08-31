@@ -16,13 +16,10 @@ class Player(models.Model):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['last_name', 'date', 'time'],
-                                    name='primary_key')
+            models.UniqueConstraint(fields=['last_name', 'first_name'],
+                                    name='player_pk')
         ]
-        indexes = [
-            models.Index(fields=['club', '-date'])
-        ]
-        ordering = ('-date', 'time')
+        ordering = ('last_name', 'first_name')
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -45,7 +42,7 @@ class Session(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(fields=['club', 'date', 'time'],
-                                    name='primary_key')
+                                    name='session_pk')
         ]
         indexes = [
             models.Index(fields=['club', '-date'])
@@ -55,10 +52,11 @@ class Session(models.Model):
     def __str__(self):
         return f"{self.club} {self.date} {self.time}"
 
+
 class Pair(models.Model):
     ORIENT_CHOICES = (
-        ('ns', 'North South'),
-        ('ew', 'East West'),
+        ('NS', 'North South'),
+        ('EW', 'East West'),
     )
 
     session = models.ForeignKey(Session, on_delete=models.CASCADE)
@@ -72,8 +70,13 @@ class Pair(models.Model):
     match_pts = models.IntegerField()
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['session', 'orient', 'pair_num'],
+                                    name='pair_pk')
+        ]
         ordering = ('orient', '-match_pts')
 
     def __str__(self):
-        return f"{self.orient} {self.pair_num}"
+        return f"Pair {self.pair_num} {self.orient}, {self.player_a}/" \
+               f"{self.player_b}"
 
