@@ -14,6 +14,19 @@ class Player(models.Model):
     phone = PhoneNumberField(blank=True, null=True)
     joined = models.DateField('date joined club', default=date.today)
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['last_name', 'date', 'time'],
+                                    name='primary_key')
+        ]
+        indexes = [
+            models.Index(fields=['club', '-date'])
+        ]
+        ordering = ('-date', 'time')
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 class Session(models.Model):
     TIME_CHOICES = (
