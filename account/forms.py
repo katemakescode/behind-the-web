@@ -3,9 +3,8 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 class LoginForm(AuthenticationForm):
-    error_css_class = 'error_test'
     username = forms.CharField(label='', widget=forms.TextInput(attrs={
-        'placeholder': 'Username', 'class': 'foo_class'}))
+        'placeholder': 'Username'}))
     password = forms.CharField(label='', widget=forms.PasswordInput(attrs={
         'placeholder': 'Password'}))
 
@@ -17,6 +16,8 @@ class LoginForm(AuthenticationForm):
 class RegistrationForm(LoginForm):
     email = forms.CharField(label='', widget=forms.EmailInput(attrs={
         'placeholder': 'Email', 'autofocus': True}))
+
+    field_order = ['email', 'username', 'password']
 
     def clean_username(self):
         pass

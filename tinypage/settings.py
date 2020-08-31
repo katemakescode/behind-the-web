@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'account',
     'newsletter',
     'overtrick',
+    'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
