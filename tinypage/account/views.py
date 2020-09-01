@@ -30,6 +30,9 @@ def register(request):
     form = RegistrationForm(request.POST or None)
 
     if form.is_valid():
-        return redirect('/')
+        user = form.save(commit=False)
+        user.set_password(form.cleaned_data.get('password'))
+        user.save()
+        return redirect('/account/login/')
 
     return render(request, 'account/registration.html', {'form': form})
