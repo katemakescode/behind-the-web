@@ -1,8 +1,8 @@
 from datetime import date
 
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
 from common.utils import LCEmailField
@@ -13,7 +13,7 @@ class Player(models.Model):
     first_name = models.CharField(max_length=30)
     email = LCEmailField()
     phone = PhoneNumberField(blank=True, null=True)
-    joined = models.DateField('date player joined club', default=date.today)
+    joined = models.DateField(_('date player joined club'), default=date.today)
 
     class Meta:
         indexes = [
@@ -25,21 +25,21 @@ class Player(models.Model):
         return f"{self.first_name} {self.last_name}"
 
     def clean(self):
-        obj = Player.objects.filter(
+        qs = Player.objects.filter(
             first_name__iexact=self.first_name,
             last_name__iexact=self.last_name
         )
-        if obj.exists():
+        if qs.exists():
             raise ValidationError(
-                'Player names must be unique regardless of case.'
+                _('Player names must be unique regardless of case.')
             )
 
 
 class Session(models.Model):
     TIME_CHOICES = (
-        ('morning', 'Morning'),
-        ('afternoon', 'Afternoon'),
-        ('evening', 'Evening'),
+        ('morning', _('Morning')),
+        ('afternoon', _('Afternoon')),
+        ('evening', _('Evening')),
     )
 
     club = models.CharField(max_length=50)
@@ -70,8 +70,8 @@ class Session(models.Model):
 
 class Pair(models.Model):
     ORIENT_CHOICES = (
-        ('NS', 'North South'),
-        ('EW', 'East West'),
+        ('NS', _('North South')),
+        ('EW', _('East West')),
     )
 
     session = models.ForeignKey(Session, on_delete=models.CASCADE)
