@@ -3,5 +3,6 @@
 {% block title %}Sign Out{% endblock %}
 
 {% block content %}
-    <h3>Goodbye!</h3>
+    <h3>Goodbye</h3>
+    <a href="{% url 'account:login' %}">Sign in again</a>
 {% endblock %}

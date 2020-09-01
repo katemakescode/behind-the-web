@@ -16,7 +16,7 @@ def login(request):
             auth.login(request, user)
 
     if request.user.is_authenticated:
-        return redirect('/')
+        return redirect('/overtrick/')
 
     return render(request, 'account/login.html', {'form': form})
 
