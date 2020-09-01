@@ -1,7 +1,7 @@
 from django.contrib import auth
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 
-from .forms import RegistrationForm, LoginForm
+from .forms import LoginForm, RegistrationForm
 
 
 def login(request):
@@ -19,6 +19,11 @@ def login(request):
         return redirect('/')
 
     return render(request, 'account/login.html', {'form': form})
+
+
+def logout(request):
+    auth.logout(request)
+    return render(request, 'account/logout.html')
 
 
 def register(request):
