@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Session {{ session }}{% endblock %}
+
+{% block content %}
+    <h3>OverTrick {{ session }}</h3>
+    {#        {% if pairs_list %}#}
+    {#            <ul>#}
+    {#                {% for pair in pairs_list %}#}
+    {#                    <li>{{ pair }}</li>#}
+    {#                {% endfor %}#}
+    {#            </ul>#}
+    {#        {% else %}#}
+    {#            <p>No pairs are available.</p>#}
+    {#        {% endif %}#}
+{% endblock %}

@@ -2,6 +2,7 @@ from datetime import date
 
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -66,6 +67,14 @@ class Session(models.Model):
 
     def __str__(self):
         return f"{self.club} {self.date} {self.time}"
+
+    def get_absolute_url(self):
+        return reverse(
+            'overtrick:sessions-detail',
+            args=[self.pk]
+            # self.date.year, self.date.month, self.date.day,
+            # self.time]
+        )
 
 
 class Pair(models.Model):

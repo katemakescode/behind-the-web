@@ -8,8 +8,8 @@
         <ul>
             {% for session in sessions_list %}
                 <li>
-                    <a href="{% url 'overtrick:sessions-detail' session.id %}">
-                        {{ session }}</a></li>
+                    <a href="{{ session.get_absolute_url }}">{{ session }}</a>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
