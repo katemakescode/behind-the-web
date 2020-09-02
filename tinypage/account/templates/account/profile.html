@@ -5,4 +5,6 @@
 {% block content %}
     <h3>{{ user.username }}</h3>
     <h6>{{ user.email }}</h6>
+    <a href="{% url 'overtrick:index' %}">OverTrick</a>
+    <a href="{% url 'account:logout' %}">Sign out</a>
 {% endblock %}

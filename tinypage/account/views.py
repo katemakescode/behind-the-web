@@ -1,9 +1,11 @@
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 
 from .forms import LoginForm, RegistrationForm
 
 
+@login_required(login_url='/account/login')
 def profile(request):
     return render(request, 'account/profile.html')
 
@@ -20,7 +22,7 @@ def login(request):
             auth.login(request, user)
 
     if request.user.is_authenticated:
-        return redirect('/overtrick/')
+        return redirect('account:profile')
 
     return render(request, 'account/login.html', {'form': form})
 

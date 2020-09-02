@@ -3,8 +3,9 @@
 {% block content %}
     <h3>OverTrick</h3>
     {% if user.is_authenticated %}
-        <p>Welcome, {{ user.get_username }}</p>
-        <a href="{% url 'account:logout' %}">Sign out</a>
+        <p>Welcome,
+            <a href="{% url 'account:profile' %}">{{ user.get_username|title }}</a>
+        </p>
     {% else %}
         <a href="{% url 'account:login' %}">Sign in</a>
     {% endif %}
