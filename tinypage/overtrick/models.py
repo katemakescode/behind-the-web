@@ -71,9 +71,9 @@ class Session(models.Model):
     def get_absolute_url(self):
         return reverse(
             'overtrick:sessions-detail',
-            args=[self.pk]
-            # self.date.year, self.date.month, self.date.day,
-            # self.time]
+            args=[self.club.lower(),
+                  self.date.year, self.date.month, self.date.day,
+                  self.time]
         )
 
 

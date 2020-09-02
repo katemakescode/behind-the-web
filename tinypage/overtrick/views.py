@@ -16,19 +16,14 @@ def session_list(request):
     )
 
 
-# def session_detail(request, club, year, month, day, time):
-def session_detail(request, session_id):
-    #     session = get_object_or_404(
-    #         Session,
-    #         club=club,
-    #         date__year=year,
-    #         date__month=month,
-    #         date__day=day,
-    #         time=time,
-
+def session_detail(request, club, year, month, day, time):
     session = get_object_or_404(
         Session,
-        pk=session_id,
+        club__iexact=club,
+        date__year=year,
+        date__month=month,
+        date__day=day,
+        time=time
     )
 
     return render(
