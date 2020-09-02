@@ -4,6 +4,10 @@ from django.shortcuts import redirect, render
 from .forms import LoginForm, RegistrationForm
 
 
+def profile(request):
+    return render(request, 'account/profile.html')
+
+
 def login(request):
     form = LoginForm(data=request.POST or None)
 
