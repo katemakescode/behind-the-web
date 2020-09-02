@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Sessions{% endblock %}
+
+{% block content %}
+    <h3>OverTrick Sessions</h3>
+    {% if sessions_list %}
+        <ul>
+            {% for session in sessions_list %}
+                <li>
+                    <a href="{% url 'overtrick:sessions-detail' session.id %}">
+                        {{ session }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No sessions are available.</p>
+    {% endif %}
+{% endblock %}
