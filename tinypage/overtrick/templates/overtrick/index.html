@@ -1,9 +1,6 @@
-{% extends "base.html" %}
+{% extends "overtrick/layout.html" %}
 
-{% block title %}Overtrick{% endblock %}
-
-{% block content %}
-    <h3>OverTrick</h3>
+{% block main %}
     {% if user.is_authenticated %}
         <p>Welcome,
             <a href="{% url 'account:profile' %}">{{ user.get_username|title }}</a>
@@ -11,4 +8,6 @@
     {% else %}
         <a href="{% url 'account:login' %}">Sign in</a>
     {% endif %}
+    <a href="{% url 'overtrick:sessions-list' %}">Sessions</a>
 {% endblock %}
+

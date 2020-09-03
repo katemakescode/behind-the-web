@@ -1,9 +1,12 @@
-{% extends "base.html" %}
+{% extends "overtrick/layout.html" %}
 
-{% block title %}Sessions{% endblock %}
+{% block subtitle %} Sessions{% endblock %}
 
-{% block content %}
-    <h3>OverTrick Sessions</h3>
+{% block nav-sidebar %}
+    <h6>Sessions</h6>
+{% endblock %}
+
+{% block main %}
     {% if sessions_list %}
         <ul>
             {% for session in sessions_list %}
@@ -16,3 +19,4 @@
         <p>No sessions are available.</p>
     {% endif %}
 {% endblock %}
+

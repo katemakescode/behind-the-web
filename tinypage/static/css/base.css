@@ -14,6 +14,20 @@ h6 {
     color: silver;
 }
 
+#main {
+    float: right;
+    width: 60%;
+    padding: 0 0 0 30px;
+}
+
+#nav-sidebar {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: #efefef;
+    height: 100%;
+}
+
 ul {
     list-style: none;
     color: gray;

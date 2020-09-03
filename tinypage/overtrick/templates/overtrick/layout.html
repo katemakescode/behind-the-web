@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Overtrick{% block subtitle %}{% endblock %}{% endblock %}
+
+{% block content %}
+    <div></div>
+
+    <nav id="nav-sidebar">
+        <h3>OverTrick</h3>
+        {% block nav-sidebar %}{% endblock %}
+    </nav>
+
+    <div id="main">
+        {% block main %}{% endblock %}
+
+    </div>
+{% endblock %}

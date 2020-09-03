@@ -1,9 +1,12 @@
-{% extends "base.html" %}
+{% extends "overtrick/layout.html" %}
 
-{% block title %}Session {{ session }}{% endblock %}
+{% block subtitle %}Session {{ session }}{% endblock %}
 
-{% block content %}
-    <h3>OverTrick {{ session }}</h3>
+{% block nav-sidebar %}
+    <h6>Session {{ session }}</h6>
+{% endblock %}
+
+{% block main %}
     {#        {% if pairs_list %}#}
     {#            <ul>#}
     {#                {% for pair in pairs_list %}#}
