@@ -53,6 +53,15 @@ class Session(models.Model):
     event = models.CharField(max_length=50)
     updated = models.DateTimeField(auto_now=True)
 
+    @property
+    def full_club_str(self):
+        return f'{self.club} Bridge Club'
+
+    @property
+    def full_time_str(self):
+        weekday_name = self.date.strftime('%A')
+        return f'{weekday_name} {self.time}'
+
     class Meta:
         constraints = [
             models.UniqueConstraint(
