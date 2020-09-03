@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
+{% block title %}TinyPage{% block subtitle %}{% endblock %}{% endblock %}
+
 {% block content %}
-    <h3>TinyPage</h3>
+    <h3><a href="{% url 'tinypage:index' %}">TinyPage</a></h3>
     <a href="{% url 'overtrick:index' %}">Overtrick</a>
 {% endblock %}
