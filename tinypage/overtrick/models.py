@@ -76,6 +76,9 @@ class Session(models.Model):
                   self.time]
         )
 
+    def get_winning_pairs(self):
+        pass
+
 
 class Pair(models.Model):
     ORIENT_CHOICES = (

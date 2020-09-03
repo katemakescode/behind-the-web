@@ -7,13 +7,13 @@
 {% endblock %}
 
 {% block main %}
-    {#        {% if pairs_list %}#}
-    {#            <ul>#}
-    {#                {% for pair in pairs_list %}#}
-    {#                    <li>{{ pair }}</li>#}
-    {#                {% endfor %}#}
-    {#            </ul>#}
-    {#        {% else %}#}
-    {#            <p>No pairs are available.</p>#}
-    {#        {% endif %}#}
+    {% if pairs_list %}
+        <ul>
+            {% for pair in pairs_list %}
+                <li>{{ pair }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No pairs are available.</p>
+    {% endif %}
 {% endblock %}

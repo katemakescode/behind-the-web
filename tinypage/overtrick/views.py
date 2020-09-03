@@ -26,8 +26,13 @@ def session_detail(request, club, year, month, day, time):
         time=time
     )
 
+    pairs = session.pair_set.all()
+
     return render(
         request,
         'overtrick/session/detail.html',
-        {'session': session}
+        {
+            'session': session,
+            'pairs_list': pairs,
+        }
     )

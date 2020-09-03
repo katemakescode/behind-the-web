@@ -7,7 +7,7 @@ p {
 }
 
 h3 {
-    color: dimgray;
+    color: slategray;
 }
 
 h6 {
@@ -16,13 +16,13 @@ h6 {
 
 #main {
     float: right;
-    width: 60%;
+    width: 80%;
     padding: 0 0 0 30px;
 }
 
 #nav-sidebar {
     float: left;
-    width: 30%;
+    width: 20%;
     padding: 10px;
     background: #efefef;
     height: 100%;
@@ -35,7 +35,7 @@ ul {
 }
 
 a {
-    color: gray;
+    color: darkslategrey;
 }
 
 input {
