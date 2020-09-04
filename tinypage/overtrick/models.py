@@ -62,6 +62,13 @@ class Session(models.Model):
         weekday_name = self.date.strftime('%A')
         return f'{weekday_name} {self.time}'
 
+    @property
+    def winning_pairs(self):
+        return {
+            'NS': self.pair_set(manager='ns').first(),
+            'EW': self.pair_set(manager='ew').first()
+        }
+
     class Meta:
         constraints = [
             models.UniqueConstraint(
@@ -85,9 +92,15 @@ class Session(models.Model):
                   self.time]
         )
 
-    @property
-    def winning_pairs(self):
-        return self.pair_set.first()
+
+class NSManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(orient='NS')
+
+
+class EWManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(orient='EW')
 
 
 class Pair(models.Model):
@@ -114,6 +127,10 @@ class Pair(models.Model):
         related_name='sessions_as_b',
     )
     match_pts = models.IntegerField()
+
+    objects = models.Manager()
+    ns = NSManager()
+    ew = EWManager()
 
     class Meta:
         constraints = [
