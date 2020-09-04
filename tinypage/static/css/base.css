@@ -2,16 +2,16 @@ body {
     background-color: ghostwhite;
 }
 
-p {
-    color: gray;
-}
-
 h3 {
     color: slategray;
 }
 
 h6 {
     color: silver;
+}
+
+p {
+    color: gray;
 }
 
 #main {

@@ -4,8 +4,19 @@
 
 {% block main %}
     {% if sessions_list %}
+        <div id="leader">
+            {% with leader=sessions_list.0 %}
+                <h6>
+                    {{ leader.event }},
+                    {{ leader.full_club_str }}
+                </h6>
+                <h6>{{ leader.full_time_str }}, {{ leader.date }}</h6>
+                <p>Winning pairs:</p>
+                <p>{{ leader.winning_pairs }}</p>
+            {% endwith %}
+        </div>
         <ul>
-            {% for session in sessions_list %}
+            {% for session in sessions_list|slice:"1:" %}
                 <li>
                     <a href="{{ session.get_absolute_url }}">{{ session }}</a>
                 </li>

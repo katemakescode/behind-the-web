@@ -85,8 +85,9 @@ class Session(models.Model):
                   self.time]
         )
 
-    def get_winning_pairs(self):
-        pass
+    @property
+    def winning_pairs(self):
+        return self.pair_set.first()
 
 
 class Pair(models.Model):
