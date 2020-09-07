@@ -37,7 +37,7 @@ The data is currently gleaned from [NZ Scorer](https://bridgenz.co.nz/scorer
     * ladders and tournaments
     * board and hand records
 
-* Swag ecommerce
+* Merchant ecommerce
 
 * deployment to AWS
     * API Gateway
