@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.views.generic import ListView
 
 from .models import Session
 
@@ -7,13 +8,9 @@ def index(request):
     return render(request, 'overtrick/index.html')
 
 
-def session_list(request):
-    sessions = Session.objects.all()
-    return render(
-        request,
-        'overtrick/session/list.html',
-        {'sessions_list': sessions}
-    )
+class SessionListView(ListView):
+    model = Session
+    template_name = 'overtrick/session/list.html'
 
 
 def session_detail(request, club, year, month, day, time):
