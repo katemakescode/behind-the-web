@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('newsletter', '0002_subscriber_created'),
+        ('contact', '0002_subscriber_created'),
     ]
 
     operations = [

@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'home',
     'account',
-    'newsletter',
+    'contact',
     'overtrick',
     'phonenumber_field',
     'django.contrib.admin',
