@@ -1,7 +1,8 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 
-from .models import Session
+from .forms import PlayerForm
+from .models import Player, Session
 
 
 def index(request):
@@ -33,3 +34,35 @@ def session_detail(request, club, year, month, day, time):
             'pairs_list': pairs,
         }
     )
+
+
+def player_list():
+    pass
+
+
+def player_detail(request, player_id=None, *args, **kwargs):
+    player = get_object_or_404(Player, pk=player_id)
+    return render(
+        request,
+        'overtrick/player/player.html',
+        {'player': player}
+    )
+
+
+def player_create(request):
+    print(request.user, request.user.is_authenticated)
+    form = PlayerForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        form = PlayerForm()
+
+    return render(request, 'overtrick/player/player.html', {'form': form})
+
+
+def player_update():
+    pass
+
+
+def player_delete():
+    pass
