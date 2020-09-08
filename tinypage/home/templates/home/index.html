@@ -3,6 +3,13 @@
 {% block title %}TinyPage{% block subtitle %}{% endblock %}{% endblock %}
 
 {% block content %}
-    <h3><a href="{% url 'tinypage:index' %}">TinyPage</a></h3>
+    <h3>
+        <a href="{% url 'tinypage:index' %}">TinyPage</a>:
+        Behind the Web
+    </h3>
     <a href="{% url 'overtrick:index' %}">Overtrick</a>
+
+    <div>
+        {% include "contact/message.html" %}
+    </div>
 {% endblock %}

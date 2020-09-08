@@ -5,7 +5,7 @@ from django.shortcuts import render
 from .forms import ContactForm
 
 
-def message_send(request):
+def build_message_context(request):
     sent = False
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -21,4 +21,9 @@ def message_send(request):
     else:
         form = ContactForm()
     context = dict(form=form, sent=sent)
+    return context
+
+
+def message_send(request):
+    context = build_message_context(request)
     return render(request, 'contact/message.html', context)
