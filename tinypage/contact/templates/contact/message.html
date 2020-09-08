@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Subscribe{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block content %}
-    <h3>Newsletter subscription</h3>
+    <h3>GET IN TOUCH</h3>
 
     <form method="post"> {% csrf_token %}
         {{ form.as_p }}
-        <p><input type="submit" value="Subscribe"></p>
+        <p><input type="submit" value="SEND MESSAGE"></p>
     </form>
 {% endblock %}

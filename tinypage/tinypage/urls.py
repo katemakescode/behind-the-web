@@ -22,7 +22,7 @@ urlpatterns = [
                   path('', include('home.urls')),
                   path('account/',
                        include('account.urls', namespace='account')),
-                  path('newsletter/', include('newsletter.urls')),
+                  path('contact/', include('contact.urls')),
                   path('overtrick/',
                        include('overtrick.urls', namespace='overtrick')),
                   path('admin/', admin.site.urls),
