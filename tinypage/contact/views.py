@@ -5,12 +5,12 @@ from django.shortcuts import render
 from .forms import ContactForm
 
 
-#
 def message_send(request):
+    sent = False
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            result = send_mail(
+            sent = send_mail(
                 subject=f"TinyPage message received from "
                         f"{form.cleaned_data['name']}",
                 message=form.cleaned_data['message'],
@@ -20,4 +20,5 @@ def message_send(request):
             )
     else:
         form = ContactForm()
-    return render(request, 'contact/message.html', {'form': form})
+    context = dict(form=form, sent=sent)
+    return render(request, 'contact/message.html', context)

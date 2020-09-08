@@ -10,4 +10,8 @@
         {{ form.as_p }}
         <p><input type="submit" value="SEND MESSAGE"></p>
     </form>
+
+    {% if sent %}
+        <p>Your message was successfully sent. I'll be in touch.</p>
+    {% endif %}
 {% endblock %}
