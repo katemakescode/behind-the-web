@@ -1,8 +1,9 @@
 {% extends "overtrick/layout.html" %}
 
-{% block subtitle %}Profile{% endblock %}
+{% block subtitle %} {{ player.username }}{% endblock %}
 
 {% block nav-sidebar %}
+    sidebar
     <h6>{{ player.username }}</h6>
 {% endblock %}
 

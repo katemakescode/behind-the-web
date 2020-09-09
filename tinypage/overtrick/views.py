@@ -41,7 +41,7 @@ class PlayerListView(ListView):
     template_name = 'overtrick/player/list.html'
 
 
-def player_detail(request, player_id=None, *args, **kwargs):
+def player_detail(request, player_id, *args, **kwargs):
     player = get_object_or_404(Player, pk=player_id)
     return render(
         request,
