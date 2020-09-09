@@ -8,6 +8,10 @@
     <a href="{% url 'overtrick:index' %}">OverTrick</a>
     <a href="{% url 'account:logout' %}">Sign out</a>
 
+    <a href="{% url 'overtrick:players-detail' player_id=1 %}">
+        Player records
+    </a>
+
     {% if user.is_staff %}
         <h6>Admin</h6>
     {% endif %}
