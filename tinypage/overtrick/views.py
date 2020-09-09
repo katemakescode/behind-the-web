@@ -36,15 +36,16 @@ def session_detail(request, club, year, month, day, time):
     )
 
 
-def player_list():
-    pass
+class PlayerListView(ListView):
+    model = Player
+    template_name = 'overtrick/player/list.html'
 
 
 def player_detail(request, player_id=None, *args, **kwargs):
     player = get_object_or_404(Player, pk=player_id)
     return render(
         request,
-        'overtrick/player/player.html',
+        'overtrick/player/detail.html',
         {'player': player}
     )
 
@@ -57,7 +58,7 @@ def player_create(request):
         form.save()
         form = PlayerForm()
 
-    return render(request, 'overtrick/player/player.html', {'form': form})
+    return render(request, 'overtrick/player/detail.html', {'form': form})
 
 
 def player_update():

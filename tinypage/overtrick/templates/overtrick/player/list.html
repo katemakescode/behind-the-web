@@ -1,0 +1,21 @@
+{% extends "overtrick/layout.html" %}
+
+{% block subtitle %} Players{% endblock %}
+
+{% block main %}
+    <h3>Player Listing</h3>
+    {% if player_list %}
+        <p>Player listing</p>
+        <ul>
+            {% for player in player_list %}
+                <li>
+                    {#                        <a href="{{ player.get_absolute_url }}">#}
+                    {{ player }}
+                    {#                        </a>#}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No players are available.</p>
+    {% endif %}
+{% endblock %}

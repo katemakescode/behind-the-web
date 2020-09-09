@@ -8,6 +8,7 @@
     <nav id="nav-sidebar">
         <h3><a href="{% url 'overtrick:index' %}">OverTrick</a></h3>
         {% block nav-sidebar %}{% endblock %}
+        <a href="{% url 'overtrick:players-list' %}">Players</a>
         <a href="{% url 'overtrick:sessions-list' %}">Sessions</a>
     </nav>
 
