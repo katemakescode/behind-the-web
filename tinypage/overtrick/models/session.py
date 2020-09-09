@@ -23,11 +23,11 @@ class Session(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     @property
-    def full_club_str(self):
+    def full_club(self):
         return f'{self.club} Bridge Club'
 
     @property
-    def full_time_str(self):
+    def full_time(self):
         weekday_name = self.date.strftime('%A')
         return f'{weekday_name} {self.time}'
 

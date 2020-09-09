@@ -8,9 +8,9 @@
             {% with leader=session_list.0 %}
                 <h6><a href="{{ leader.get_absolute_url }}">
                     {{ leader.event }},
-                    {{ leader.full_club_str }}
+                    {{ leader.full_club }}
                 </a></h6>
-                <h6>{{ leader.full_time_str }}, {{ leader.date }}</h6>
+                <h6>{{ leader.full_time }}, {{ leader.date }}</h6>
                 <p>Winning pairs:</p>
                 <p>{{ leader.winning_pairs.NS }}</p>
                 <p>{{ leader.winning_pairs.EW }}</p>

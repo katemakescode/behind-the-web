@@ -16,6 +16,10 @@ class Player(models.Model):
     phone = PhoneNumberField(blank=True, null=True)
     joined = models.DateField(_('date player joined club'), default=date.today)
 
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
     class Meta:
         indexes = [
             models.Index(fields=['last_name', 'first_name'])
@@ -23,7 +27,7 @@ class Player(models.Model):
         ordering = ('last_name', 'first_name')
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.full_name}"
 
     def get_absolute_url(self):
         return reverse(
