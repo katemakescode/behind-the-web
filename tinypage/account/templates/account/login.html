@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-
-{% block title %}Sign In{% endblock %}
-
-{% block content %}
-    {% include "form.html" with name="Sign In" %}
-    <a href="{% url 'account:register' %}">Sign up instead</a>
-{% endblock %}

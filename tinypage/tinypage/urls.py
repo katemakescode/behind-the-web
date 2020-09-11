@@ -20,10 +20,7 @@ from django.urls import include, path
 
 urlpatterns = [
                   path('', include('home.urls')),
-                  path('account/',
-                       include('account.urls', namespace='account')),
                   path('contact/', include('contact.urls')),
-                  path('overtrick/',
-                       include('overtrick.urls', namespace='overtrick')),
                   path('admin/', admin.site.urls),
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+              ] + static(settings.STATIC_URL,
+                         document_root=settings.STATIC_ROOT)
