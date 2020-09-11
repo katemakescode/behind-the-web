@@ -127,6 +127,10 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'static_cdn'
 
+# Project links
+
+OVERTRICK_URL = os.environ['OVERTRICK_URL']
+
 # Email
 
 EMAIL_HOST = 'smtp.gmail.com'
