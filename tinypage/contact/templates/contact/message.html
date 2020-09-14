@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}Contact{% endblock title %}
 
 {% block content %}
     <h6>GET IN TOUCH</h6>
@@ -14,4 +14,4 @@
     {% if sent %}
         <p>Your message was successfully sent. I'll be in touch.</p>
     {% endif %}
-{% endblock %}
+{% endblock content %}

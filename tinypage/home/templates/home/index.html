@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}TinyPage{% block subtitle %}{% endblock %}{% endblock %}
+{% block title %}
+    TinyPage {% block subtitle %}{% endblock subtitle %}
+{% endblock title %}
 
 {% block content %}
     <h3>
@@ -12,4 +14,4 @@
     <div>
         {% include "contact/message.html" %}
     </div>
-{% endblock %}
+{% endblock content %}
