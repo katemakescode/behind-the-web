@@ -1,14 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
+{% load widget_tweaks %}
 
 {% block title %}Contact{% endblock title %}
 
 {% block content %}
     <h6>GET IN TOUCH</h6>
 
-    <form method="post"> {% csrf_token %}
-        {{ form.as_p }}
-        <p><input type="submit" value="SEND MESSAGE"></p>
+    <form method="post" id="contact-form"> {% csrf_token %}
+        <div class="form-group">
+            {{ form.name.label_tag }}
+            {% render_field form.name class="form-control" %}
+        </div>
+        <div class="form-group">
+            {{ form.email.label_tag }}
+            {% render_field form.email class="form-control" %}
+        </div>
+        <div class="form-group">
+            {{ form.message.label_tag }}
+            {% render_field form.message class="form-control" %}
+        </div>
+        <button type="submit" class="btn btn-primary">
+            SEND MESSAGE
+        </button>
     </form>
 
     {% if sent %}
