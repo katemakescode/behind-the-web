@@ -54,3 +54,7 @@ a {
 input {
     color: dimgray;
 }
+
+label {
+    color: silver;
+}
