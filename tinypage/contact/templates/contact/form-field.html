@@ -1,0 +1,6 @@
+{% load contact_tags widget_tweaks %}
+
+<div class="form-group {{ classes }}">
+    {{ field|label_upper }}
+    {% render_field field class="form-control" %}
+</div>
