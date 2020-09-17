@@ -1,8 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     TinyPage {% block subtitle %}{% endblock subtitle %}
 {% endblock title %}
+
+{% block stylesheets %}
+    <link rel="stylesheet"
+          href="{% static 'tinypage/css/social-circles.css' %}"
+    >
+{% endblock stylesheets %}
 
 {% block content %}
     <section id="navbar" class="bg-dark">
@@ -20,7 +27,7 @@
                 <p><a href="{{ overtrick_url }}">OverTrick</a></p>
             </div>
             <div class="col-md-2 offset-md-2 text-center">
-                <p>Mercantile</p>
+                <p class="text-muted">Mercantile</p>
             </div>
         </div>
     </section>
@@ -35,14 +42,17 @@
         {% include "contact/message.html" %}
     </section>
 
-    <section id="footer" class="bg-dark text-center">
-        <h6>
-            contact icons
-        </h6>
-        <h6>
-            Styled by Bootstrap
-            Copyright TinyPage 2020
-            Powered by Django
-        </h6>
+    <section id="footer" class="row bg-dark text-center">
+        <div class="col-6">
+            <h6>Crafted by TinyPage &bull; Powered by Django</h6>
+        </div>
+        <div class="col-6">
+            <a class="icon-linkedin social-button borderless"
+               href="https://www.linkedin.com/in/katemckenzie/">
+            </a>
+            <a class="icon-github social-button borderless"
+               href="https://github.com/katemakescode/tinypage">
+            </a>
+        </div>
     </section>
 {% endblock content %}
