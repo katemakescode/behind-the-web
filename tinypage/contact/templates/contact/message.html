@@ -1,15 +1,15 @@
 {% block content %}
-    <h6>GET IN TOUCH</h6>
+    <h3 class="pb-3">GET IN TOUCH</h3>
 
     <form method="post" id="contact-form"> {% csrf_token %}
         {% with snip="contact/form-field.html" %}
             <div class="row">
-                {% include snip with field=form.name classes="col-md-5" %}
-                {% include snip with field=form.email classes="col-md-5 offset-2" %}
+                {% include snip with field=form.name classes="col-md-6" %}
+                {% include snip with field=form.email classes="col-md-6" %}
             </div>
             {% include snip with field=form.message %}
         {% endwith %}
-        <button type="submit" class="btn btn-outline-primary">
+        <button type="submit" class="btn btn-outline-primary mt-3">
             SEND MESSAGE
         </button>
     </form>

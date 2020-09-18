@@ -12,47 +12,105 @@
 {% endblock stylesheets %}
 
 {% block content %}
-    <section id="navbar" class="bg-dark">
-        <a href="{% url 'tinypage:index' %}">TinyPage</a>
-    </section>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a href="{% url 'tinypage:index' %}" class="navbar-brand">TinyPage</a>
+        <button class="navbar-toggler" data-toggle="collapse"
+                data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contact-form" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <section id="masthead" class="bg-light text-center">
-        <h3>BEHIND THE WEB</h3>
-        <h6>Back End and Data Developer</h6>
-    </section>
-
-    <section id="portfolio">
-        <div class="row">
-            <div class="col-md-2 offset-md-3 text-center">
-                <p><a href="{{ overtrick_url }}">OverTrick</a></p>
+    <section id="masthead" class="bg-light">
+        <div class="container py-5">
+            <div class="row pt-5 d-flex justify-content-center ">
+                <h1>BEHIND THE WEB</h1>
             </div>
-            <div class="col-md-2 offset-md-2 text-center">
-                <p class="text-muted">Mercantile</p>
+            <div class="row d-flex justify-content-center">
+                <h6>Back End and Data Developer</h6>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center">
+                <h3>PROJECTS</h3>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="card col-md-3 mx-md-5 my-4 pt-3">
+                    <div class="card-body">
+                        <img class="card-img-top"
+                             alt="Photo of bridge by Roland Lösslein on Unsplash"
+                             src="{% static 'tinypage/img/roland-losslein-DmDYX_ltI48-crop.jpg' %}">
+                        <h6 class="card-title pt-3">
+                            <a href="{{ overtrick_url }}">OverTrick</a>
+                        </h6>
+                        <p class="card-text">duplicate bridge analyser</p>
+                    </div>
+                </div>
+                <div class="card col-md-3 mx-md-5 my-4 pt-3">
+                    <div class="card-body">
+                        <img class="card-img-top"
+                             alt="Photo of camel in desert by Mariam Soliman on Unsplash"
+                             src="{% static 'tinypage/img/mariam-soliman-Ht5XmeuLyDg-unsplash.jpg' %}">
+                        <h6 class="card-title pt-3 text-muted">Mercantile</h6>
+                        <p class="card-text">tiny eCommerce</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="bg-light text-center">
-        <h3>ABOUT</h3>
-        <p class="lead">This is important stuff about me.</p>
-        <p>This is some other stuff about me.</p>
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center">
+                <h3>ABOUT</h3>
+            </div>
+            <div class="row mx-2 d-flex justify-content-center">
+                <p class="lead my-0">This is some terse and important stuff
+                    about me.</p>
+            </div>
+            <div class="row mx-2 d-flex justify-content-center">
+                <h6 class="my-1">This is some other really really long-winded
+                    stuff about me and what I can do for your company.</h6>
+            </div>
     </section>
 
-    <section id="contact-form" class="col-6 mx-auto py-5 text-center">
+    <section id="contact-form" class="col-md-6 mx-auto py-5 text-center">
         {% include "contact/message.html" %}
     </section>
 
-    <section id="footer" class="row bg-dark text-center">
-        <div class="col-6">
-            <h6>Crafted by TinyPage &bull; Powered by Django</h6>
-        </div>
-        <div class="col-6">
-            <a class="icon-linkedin social-button borderless"
-               href="https://www.linkedin.com/in/katemckenzie/">
-            </a>
-            <a class="icon-github social-button borderless"
-               href="https://github.com/katemakescode/tinypage">
-            </a>
+    <section id="footer" class="py-3 bg-dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-10 text-md-left">
+                    <h6 class="mb-0">
+                        <span>Crafted by TinyPage</span> &bull;
+                        <span>Powered by Django</span>
+                    </h6>
+                </div>
+                <div class="col-2 p-0 text-md-right">
+                    <a class="pr-md-5 icon-linkedin social-button borderless"
+                       href="https://www.linkedin.com/in/katemckenzie/">
+                    </a>
+                    <a class="icon-github social-button borderless"
+                       href="https://github.com/katemakescode/tinypage">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock content %}
