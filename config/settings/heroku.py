@@ -3,7 +3,7 @@ import dj_database_url
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['overtrick.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['tinypage.herokuapp.com', '127.0.0.1']
 ADMINS = (
     ('Kate M', 'tinypager@gmail.com'),
 )
