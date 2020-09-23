@@ -13,7 +13,9 @@
 
 {% block content %}
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-        <a href="{% url 'tinypage:index' %}" class="navbar-brand">TinyPage</a>
+        <a href="{% url 'tinypage:index' %}" class="navbar-brand">
+            Kate McKenzie
+        </a>
         <button class="navbar-toggler" data-toggle="collapse"
                 data-target="#navbar-menu">
             <span class="navbar-toggler-icon"></span>
@@ -75,21 +77,25 @@
     </section>
 
     <section id="about" class="bg-light text-center">
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center">
+        <div class="container py-5 d-flex justify-content-center">
+            <div class="col-9 mx-auto">
                 <h3>ABOUT</h3>
+                <h6 class="lead mt-4 px-1">
+                    I'm passionate about the things that make websites work.
+                    I love building scalable, secure, performant applications using Django,
+                    REST, AWS, and distributed data stores.
+                    I can also throw together responsive user interfaces using Bootstrap and React
+                    if required, and I know enough about machine learning concepts to support
+                    Data Scientists.
+                </h6>
             </div>
-            <div class="row mx-2 d-flex justify-content-center">
-                <p class="lead my-0">This is some terse and important stuff
-                    about me.</p>
-            </div>
-            <div class="row mx-2 d-flex justify-content-center">
-                <h6 class="my-1">This is some other really really long-winded
-                    stuff about me and what I can do for your company.</h6>
-            </div>
+        </div>
     </section>
 
     <section id="contact-form" class="col-md-6 mx-auto py-5 text-center">
+        <h6 class="my-3">
+            {{ 'If my skills might meet your needs'|upper }}
+        </h6>
         {% include "contact/message.html" %}
     </section>
 
@@ -98,7 +104,7 @@
             <div class="row align-items-center">
                 <div class="col-10 text-md-left">
                     <h6 class="mb-0">
-                        <span>Crafted by TinyPage</span> &bull;
+                        <span>Crafted by Kate</span> &bull;
                         <span>Powered by Django</span>
                     </h6>
                 </div>
