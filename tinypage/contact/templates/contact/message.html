@@ -11,13 +11,13 @@
         {% endwith %}
 
         <div class="mt-4">
-            {% if not sent %}
-                <div class="alert mx-auto mb-2" role="alert">
+            {% if sent %}
+                <div class="alert mx-auto p-3" role="alert">
                     {{ "I'll get back to you soon" }}
                 </div>
             {% else %}
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-outline-secondary">
+                    <button type="submit" class="btn p-3 btn-outline">
                         SEND MESSAGE
                     </button>
                 </div>

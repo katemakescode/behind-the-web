@@ -59,23 +59,30 @@ label {
     }
 }
 
+.form-control:focus {
+    border-color: rgba(108, 121, 122, 0.2);
+    box-shadow: 0 0 0 0.2rem rgba(213, 209, 195, 0.4);
+}
+
+.btn-outline,
+.btn-outline:active,
+.btn-outline:visited,
+.btn-outline:focus {
+    border-color: var(--color-light);
+    color: var(--color-contrast);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-light);;
+    border-color: var(--color-light);
+    color: var(--color-white);
+}
+
 .alert {
     display: inline-block;
+    height: 20%;
     border-color: var(--color-light);
     color: var(--color-contrast);
-}
-
-.btn-outline-secondary,
-.btn-outline-secondary:active,
-.btn-outline-secondary:visited,
-.btn-outline-secondary:focus {
-    border-color: var(--color-light);
-    color: var(--color-contrast);
-}
-
-.btn-outline-secondary:hover {
-    border-color: var(--color-contrast);
-    color: var(--color-light);
 }
 
 .bg-color-light {
