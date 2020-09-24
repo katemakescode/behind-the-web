@@ -3,18 +3,24 @@
 
     <form method="post" id="contact-form"> {% csrf_token %}
         {% with snip="contact/form-field.html" %}
-            <div class="row">
+            <div class="row mb-2">
                 {% include snip with field=form.name classes="col-md-6" %}
                 {% include snip with field=form.email classes="col-md-6" %}
             </div>
             {% include snip with field=form.message %}
         {% endwith %}
-        <button type="submit" class="btn btn-outline-secondary mt-3">
-            SEND MESSAGE
-        </button>
+
+        <div class="mt-4">
+            {% if sent %}
+                <div class="alert alert-dark mt-4" role="alert">
+                    Your message was sent successfully. I'll be in touch.
+                </div>
+            {% else %}
+                <button type="submit" class="btn btn-outline-secondary">
+                    SEND MESSAGE
+                </button>
+            {% endif %}
+        </div>
     </form>
 
-    {% if sent %}
-        <p>Your message was successfully sent. I'll be in touch.</p>
-    {% endif %}
 {% endblock content %}
