@@ -17,8 +17,12 @@ p, h4, h5, h6 {
 }
 
 @media (min-width: 992px) {
-    h1 {
+    #masthead h2 {
         font-size: 5rem;
+    }
+
+    #masthead h5 {
+        font-size: 2rem;
     }
 }
 
@@ -44,7 +48,14 @@ label {
 }
 
 #about .text {
+    font-size: 0.9rem;
     line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+    #about .text {
+        font-size: 1.2rem;
+    }
 }
 
 .bg-color-light {

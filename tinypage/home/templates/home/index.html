@@ -12,7 +12,7 @@
 {% endblock stylesheets %}
 
 {% block content %}
-    <nav class="navbar navbar-dark navbar-expand-lg px-5 py-3 bg-color-dark">
+    <nav class="navbar navbar-dark navbar-expand-lg px-lg-5 py-3 bg-color-dark">
         <a href="{% url 'tinypage:index' %}" class="navbar-brand">
             Kate McKenzie
         </a>
@@ -36,17 +36,20 @@
     </nav>
 
     <section id="masthead" class="bg-color-light">
-        <div class="container py-5">
-            <div class="row d-flex pt-4 justify-content-center">
-                <img class="img-fluid"
-                     alt="Cobweb by prettycons on Flaticon"
-                     src="{% static 'tinypage/img/cobweb.png' %}">
+        <div class="container pt-4 py-lg-5">
+            <div class="row d-flex py-4 justify-content-center">
+                <div class="col-6 col-lg-12 d-flex justify-content-center">
+                    <img class="img-fluid"
+                         alt="Cobweb by prettycons on Flaticon"
+                         src="{% static 'tinypage/img/cobweb.png' %}">
+                </div>
+
             </div>
             <div class="row d-flex pt-3 justify-content-center">
-                <h1>BEHIND THE WEB</h1>
+                <h2 class="banner">BEHIND THE WEB</h2>
             </div>
-            <div class="row d-flex pt-3 pb-5 justify-content-center">
-                <h3>Back End and Data Development</h3>
+            <div class="row d-flex pt-0 pt-lg-3 pb-5 justify-content-center">
+                <h5 class="subbanner">Back End and Data Development</h5>
             </div>
         </div>
     </section>
