@@ -12,6 +12,14 @@
 {% endblock stylesheets %}
 
 {% block content %}
+    {% if sent %}
+        <script type='text/javascript'>
+            $(document).ready(function () {
+                window.location = '#contact-form'
+            });
+        </script>
+    {% endif %}
+
     <nav class="navbar navbar-dark navbar-expand-lg px-4 px-lg-5 py-3
     bg-color-dark">
         <a href="{% url 'tinypage:index' %}" class="navbar-brand">

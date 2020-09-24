@@ -48,6 +48,23 @@ label {
     opacity: 0.7;
 }
 
+#about .text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+    #about .text {
+        font-size: 1.2rem;
+    }
+}
+
+.alert {
+    display: inline-block;
+    border-color: var(--color-light);
+    color: var(--color-contrast);
+}
+
 .btn-outline-secondary,
 .btn-outline-secondary:active,
 .btn-outline-secondary:visited,
@@ -59,17 +76,6 @@ label {
 .btn-outline-secondary:hover {
     border-color: var(--color-contrast);
     color: var(--color-light);
-}
-
-#about .text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-@media (min-width: 992px) {
-    #about .text {
-        font-size: 1.2rem;
-    }
 }
 
 .bg-color-light {

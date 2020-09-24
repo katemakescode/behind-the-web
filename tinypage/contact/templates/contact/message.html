@@ -1,7 +1,7 @@
 {% block content %}
     <h3 class="pb-3">GET IN TOUCH</h3>
 
-    <form method="post" id="contact-form"> {% csrf_token %}
+    <form method="post" action="#contact-form" id="contact-form"> {% csrf_token %}
         {% with snip="contact/form-field.html" %}
             <div class="row mb-2">
                 {% include snip with field=form.name classes="col-md-6" %}
@@ -11,14 +11,16 @@
         {% endwith %}
 
         <div class="mt-4">
-            {% if sent %}
-                <div class="alert alert-dark mt-4" role="alert">
-                    Your message was sent successfully. I'll be in touch.
+            {% if not sent %}
+                <div class="alert mx-auto mb-2" role="alert">
+                    {{ "I'll get back to you soon" }}
                 </div>
             {% else %}
-                <button type="submit" class="btn btn-outline-secondary">
-                    SEND MESSAGE
-                </button>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-secondary">
+                        SEND MESSAGE
+                    </button>
+                </div>
             {% endif %}
         </div>
     </form>
