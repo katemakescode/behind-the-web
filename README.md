@@ -1,17 +1,16 @@
-# TinyPage
+# Behind the Web
 
-TinyPage is a personal portfolio website, and wrapper for the OverTrick and Mercantile projects.
+Behind the Web is a personal portfolio webpage, and wrapper for the OverTrick and Mercantile projects.
+The styling is deliberately minimalist; I'm not a web designer, and I'd rather spend my time crafting 
+back end infrastructure and business logic.
  
-Note: TinyPage should render adequately on both desktop and mobile, but has only been tested on Chrome.
+Note: the page should render adequately on both desktop and mobile, but has only been tested
+on Chrome 85 on Linux Mint.
 
 
 ## Roadmap
-* styling
-    * colour palette
-    * deployment to Heroku AWS
-    * contact form error handling
-
-* Merchant ecommerce
+* contact form error display
+* Merchant ecommerce stub
 
 
 ## Credits
@@ -19,7 +18,7 @@ Photos by [Roland Lösslein](https://unsplash.com/@roland_loesslein?utm_source=u
 and [Mariam Soliman](https://unsplash.com/@mariamsoliman?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 on [Unsplash](https://unsplash.com/@katemakescode/likes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
-Spider icons by [prettycons](https://www.flaticon.com/authors/prettycons)
+Web icons by [prettycons](https://www.flaticon.com/authors/prettycons)
 and [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) 
 on [www.flaticon.com](https://www.flaticon.com)
 
