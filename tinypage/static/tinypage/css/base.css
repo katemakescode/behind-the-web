@@ -1,54 +1,47 @@
-/* CSV */
-/*fcf4ee,d5d1c3,8c7a69,03191e,6c0f16*/
-
-/* Array */
-/*["fcf4ee","d5d1c3","8c7a69","03191e","6c0f16"]*/
-
-/* Object */
-/*{"Seashell":"fcf4ee","Bone":"d5d1c3","Shadow":"8c7a69","Rich Black FOGRA 29":"03191e","Rosewood":"6c0f16"}*/
-
-/* Extended Array */
-/*[{"name":"Seashell","hex":"fcf4ee","rgb":[252,244,238],"cmyk":[0,3,6,1],"hsb":[26,6,99],"hsl":[26,70,96],"lab":[97,2,4]},{"name":"Bone","hex":"d5d1c3","rgb":[213,209,195],"cmyk":[0,2,8,16],"hsb":[47,8,84],"hsl":[47,18,80],"lab":[84,-1,7]},{"name":"Shadow","hex":"8c7a69","rgb":[140,122,105],"cmyk":[0,13,25,45],"hsb":[29,25,55],"hsl":[29,14,48],"lab":[52,4,12]},{"name":"Rich Black FOGRA 29","hex":"03191e","rgb":[3,25,30],"cmyk":[90,17,0,88],"hsb":[191,90,12],"hsl":[191,82,6],"lab":[7,-6,-6]},{"name":"Rosewood","hex":"6c0f16","rgb":[108,15,22],"cmyk":[0,86,80,58],"hsb":[355,86,42],"hsl":[355,76,24],"lab":[22,40,23]}]*/
-
+:root {
+    --color-white: #fcf4ee; /* ghostwhite */
+    --color-light: #d5d1c3; /* slategray silver gray */
+    --color-contrast: #6C797A; /* #8c7a69; darkslategray */
+    --color-dark: #1a2926; /* #031E1C; #03191e; */
+    --color-warning: #6c0f16;
+}
 
 body {
-    background-color: ghostwhite;
-}
-
-h1, h3 {
-    color: slategray;
-}
-
-h4, h5, h6 {
-    color: silver;
+    background-color: var(--color-white);
 }
 
 p {
-    color: gray;
+    color: var(--color-contrast);
+    opacity: 0.6;
+    font-weight: lighter;
 }
 
-#main {
-    float: right;
-    width: 80%;
-    padding: 0 0 0 30px;
+h1, h2, h3 {
+    color: var(--color-contrast);
 }
 
-#nav-sidebar {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #efefef;
-    height: 100%;
+@media (min-width: 992px) {
+    h1 {
+        font-size: 5rem;
+    }
 }
 
-ul {
-    list-style: none;
-    color: gray;
-    padding-left: 0;
+h4, h5, h6 {
+    color: var(--color-contrast);
+    opacity: 0.6;
+}
+
+li {
+    padding-left: 25px;
 }
 
 a {
-    color: darkslategrey;
+    color: var(--color-dark);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--color-contrast);
 }
 
 input {
@@ -57,4 +50,24 @@ input {
 
 label {
     color: silver;
+}
+
+.bg-color-light {
+    background-color: var(--color-light);
+}
+
+.bg-color-dark {
+    background-color: var(--color-dark);
+}
+
+.navbar-dark .navbar-brand {
+   color: var(--color-light);
+}
+
+.navbar a {
+    color: var(--color-light);
+}
+
+.navbar a:hover {
+    color: var(--color-contrast);
 }
