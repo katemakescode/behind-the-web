@@ -1,8 +1,8 @@
 :root {
-    --color-white: #fcf4ee; /* ghostwhite */
-    --color-light: #d5d1c3; /* slategray silver gray */
-    --color-contrast: #6C797A; /* #8c7a69; darkslategray */
-    --color-dark: #1a2926; /* #031E1C; #03191e; */
+    --color-white: #fcf4ee;
+    --color-light: #d5d1c3;
+    --color-contrast: #6C797A;
+    --color-dark: #1a2926;
     --color-warning: #6c0f16;
 }
 
@@ -40,11 +40,25 @@ a:hover {
 }
 
 input {
-    color: dimgray;
+    color: var(--color-contrast);
 }
 
 label {
-    color: silver;
+    color: var(--color-contrast);
+    opacity: 0.7;
+}
+
+.btn-outline-secondary,
+.btn-outline-secondary:active,
+.btn-outline-secondary:visited,
+.btn-outline-secondary:focus {
+    border-color: var(--color-light);
+    color: var(--color-contrast);
+}
+
+.btn-outline-secondary:hover {
+    border-color: var(--color-contrast);
+    color: var(--color-light);
 }
 
 #about .text {
