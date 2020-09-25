@@ -37,10 +37,10 @@ def build_message_context(request):
         if form.is_valid():
             sent = send_user_message(form)
             send_autoreply(form)
-        else:
-            form = ContactForm()
-        context = dict(form=form, sent=sent)
-        return context
+    else:
+        form = ContactForm()
+    context = dict(form=form, sent=sent)
+    return context
 
 
 def message_send(request):

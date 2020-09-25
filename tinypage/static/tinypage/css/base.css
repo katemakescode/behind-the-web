@@ -59,7 +59,7 @@ label {
     }
 }
 
-.form-control:focus {
+.form-control:focus, .btn-outline:focus {
     border-color: rgba(108, 121, 122, 0.2);
     box-shadow: 0 0 0 0.2rem rgba(213, 209, 195, 0.4);
 }
