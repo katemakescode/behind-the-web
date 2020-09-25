@@ -5,12 +5,16 @@ The styling is deliberately minimalist; I'm not a web designer, and I'd rather s
 back end infrastructure and business logic.
  
 Note: the page should render adequately on both desktop and mobile, but has only been tested
-on Chrome 85 on Linux Mint.
+on Chrome 85 on Linux Mint. 
 
 
 ## Roadmap
-* contact form error display
 * Merchant ecommerce stub
+* scrollspy and roll up labels
+* Akismet
+* 404 and 500 pages
+* message logging
+* wider testing
 
 
 ## Credits
