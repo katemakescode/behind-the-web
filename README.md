@@ -9,8 +9,8 @@ on Chrome 85 and on Android.
 
 
 ## Roadmap
-- [X] eCommerce bookstore stub
-- [ ] Bridge results stub
+- [X] eCommerce bookstore link
+- [ ] Bridge results link
 - [ ] Akismet
 - [ ] Custom 404 and 500 pages
 - [ ] Message logging

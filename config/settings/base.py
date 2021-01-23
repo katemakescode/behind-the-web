@@ -110,11 +110,6 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-# Project links
-
-OVERTRICK_URL = os.environ['OVERTRICK_URL']
-
-
 # Email
 
 EMAIL_HOST = 'smtp.gmail.com'
