@@ -13,136 +13,139 @@
 
 {% block content %}
     {% if sent %}
-        <script type='text/javascript'>
-            $(document).ready(function () {
-                window.location = '#contact-form'
-            });
-        </script>
+        <script type='text/javascript' >
+          $(document).ready(function () {
+            window.location = '#contact-form'
+          });
+        </script >
     {% endif %}
 
     <nav class="navbar navbar-dark navbar-expand-lg px-4 px-lg-5 py-3
-    bg-color-dark">
-        <a href="{% url 'tinypage:index' %}" class="navbar-brand">
+    bg-color-dark" >
+        <a href="{% url 'tinypage:index' %}" class="navbar-brand" >
             Kate McKenzie
-        </a>
+        </a >
         <button class="navbar-toggler" data-toggle="collapse"
-                data-target="#navbar-menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbar-menu" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="navbar-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#contact-form" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                data-target="#navbar-menu" >
+            <span class="navbar-toggler-icon" ></span >
+        </button >
+        <div id="navbar-menu" class="collapse navbar-collapse" >
+            <ul class="navbar-nav ml-auto" >
+                <li class="navbar-item" >
+                    <a href="#projects" class="nav-link" >Projects</a >
+                </li >
+                <li class="navbar-item" >
+                    <a href="#about" class="nav-link" >About</a >
+                </li >
+                <li class="navbar-item" >
+                    <a href="#contact-form" class="nav-link" >Contact</a >
+                </li >
+            </ul >
+        </div >
+    </nav >
 
-    <section id="masthead" class="bg-color-light">
-        <div class="container pt-4 py-lg-5">
-            <div class="row d-flex py-4 justify-content-center">
-                <div class="col-6 col-lg-12 d-flex justify-content-center">
+    <section id="masthead" class="bg-color-light" >
+        <div class="container pt-4 py-lg-5" >
+            <div class="row d-flex py-4 justify-content-center" >
+                <div class="col-6 col-lg-12 d-flex justify-content-center" >
                     <img class="img-fluid"
                          alt="Cobweb by prettycons on www.flaticon.com"
-                         src="{% static 'tinypage/img/cobweb-warm.png' %}">
-                </div>
+                         src="{% static 'tinypage/img/cobweb-warm.png' %}" >
+                </div >
 
-            </div>
-            <div class="row d-flex pt-3 justify-content-center">
-                <h2 class="banner">BEHIND THE WEB</h2>
-            </div>
-            <div class="row d-flex pt-0 pt-lg-3 pb-5 justify-content-center">
-                <h5 class="subbanner">Back End and Data Development</h5>
-            </div>
-        </div>
-    </section>
+            </div >
+            <div class="row d-flex pt-3 justify-content-center" >
+                <h2 class="banner" >BEHIND THE WEB</h2 >
+            </div >
+            <div class="row d-flex pt-0 pt-lg-3 pb-5 justify-content-center" >
+                <h5 class="subbanner" >Back End and Data Development</h5 >
+            </div >
+        </div >
+    </section >
 
-    <section id="projects" class="">
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center">
-                <h3>PROJECTS</h3>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="card col-md-3 mx-4 mx-md-5 my-4 pt-3">
-                    <a href="{{ overtrick_url }}">
-                        <div class="card-body">
-                            <img class="card-img-top"
-                                 alt="Photo of bridge by Roland Lösslein on Unsplash"
-                                 src="{% static 'tinypage/img/roland-losslein-DmDYX_ltI48-crop.jpg' %}">
-                            <h5 class="card-title pt-3">
-                                OverTrick
-                            </h5>
-                            <p class="card-text">duplicate bridge analyser</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card col-md-3 mx-4 mx-md-5 my-4 pt-3">
-                    <div class="card-body">
+    <section id="projects" class="" >
+        <div class="container py-5" >
+            <div class="row d-flex justify-content-center" >
+                <h3 >PROJECTS</h3 >
+            </div >
+            <div class="row d-flex justify-content-center" >
+                <div class="card col-md-3 mx-4 mx-md-5 my-4 pt-3" >
+                    {#                    <a href="{{ overtrick_url }}">#}
+                    <div class="card-body" >
                         <img class="card-img-top"
-                             alt="Photo of camel in desert by Mariam Soliman on Unsplash"
-                             src="{% static 'tinypage/img/mariam-soliman-Ht5XmeuLyDg-unsplash.jpg' %}">
-                        <h5 class="card-title pt-3 text-muted">Mercantile</h5>
-                        <p class="card-text">tiny eCommerce</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                             alt="Photo of bridge by Roland Lösslein on Unsplash"
+                             src="{% static 'tinypage/img/roland-losslein-DmDYX_ltI48-crop.jpg' %}" >
+                        <h5 class="card-title pt-3" >
+                            OverTrick
+                        </h5 >
+                        <p class="card-text" >duplicate bridge analyser</p >
+                    </div >
+                    {#                    </a>#}
+                </div >
+                <div class="card col-md-3 mx-4 mx-md-5 my-4 pt-3" >
+                    <a href="https://mercantile.herokuapp.com/" >
+                        <div class="card-body" >
+                            <img class="card-img-top"
+                                 alt="Photo of camel in desert by Mariam Soliman on Unsplash"
+                                 src="{% static 'tinypage/img/mariam-soliman-Ht5XmeuLyDg-unsplash.jpg' %}" >
+                            <h5 class="card-title pt-3 text-muted" >
+                                Mercantile</h5 >
+                            <p class="card-text" >eCommerce bookstore</p >
+                        </div >
+                    </a >
+                </div >
+            </div >
+        </div >
+    </section >
 
-    <section id="about" class="py-5 bg-color-light text-center">
-        <div class="container d-flex py-5 justify-content-center">
-            <div class="col col-md-9 mx-auto">
-                <h3>ABOUT</h3>
-                <h5 class="text mt-4 px-1">
+    <section id="about" class="py-5 bg-color-light text-center" >
+        <div class="container d-flex py-5 justify-content-center" >
+            <div class="col col-md-9 mx-auto" >
+                <h3 >ABOUT</h3 >
+                <h5 class="text mt-4 px-1" >
                     I'm passionate about the things that make websites work.
                     I love building scalable, secure, performant applications
                     using Django, GraphQL, AWS, and large data sets housed in
                     distributed data stores. I can also throw together
                     responsive
                     web front ends using Bootstrap and React.
-                </h5>
-            </div>
-        </div>
-    </section>
+                </h5 >
+            </div >
+        </div >
+    </section >
 
-    <section id="contact-form" class="col-md-6 mx-auto py-5 text-center">
-        <h6 class="my-3">
+    <section id="contact-form" class="col-md-6 mx-auto py-5 text-center" >
+        <h6 class="my-3" >
             {{ 'If my skills might meet your needs'|upper }}
-        </h6>
+        </h6 >
         {% include "contact/message.html" %}
-    </section>
+    </section >
 
-    <section id="footer" class="bg-color-dark">
-        <div class="container-fluid px-4 px-lg-5">
-            <div class="row py-3 align-items-center">
-                <div class="col-8 col-md-10">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="pr-lg-2">Crafted by Kate</div>
-                        <div class="d-none d-md-inline">&bull;</div>
-                        <div class="pl-lg-2">Powered by Django</div>
-                    </div>
-                </div>
-                <div class="col-4 col-md-2 px-0">
-                    <div class="d-flex justify-content-end">
-                        <div class="pr-2 pr-lg-3">
+    <section id="footer" class="bg-color-dark" >
+        <div class="container-fluid px-4 px-lg-5" >
+            <div class="row py-3 align-items-center" >
+                <div class="col-8 col-md-10" >
+                    <div class="d-flex flex-column flex-md-row" >
+                        <div class="pr-lg-2" >Crafted by Kate</div >
+                        <div class="d-none d-md-inline" >&bull;</div >
+                        <div class="pl-lg-2" >Powered by Django</div >
+                    </div >
+                </div >
+                <div class="col-4 col-md-2 px-0" >
+                    <div class="d-flex justify-content-end" >
+                        <div class="pr-2 pr-lg-3" >
                             <a class="icon-linkedin social-button borderless"
-                               href="https://www.linkedin.com/in/katemckenzie/">
-                            </a>
-                        </div>
-                        <div class="pr-4">
+                               href="https://www.linkedin.com/in/katemckenzie/" >
+                            </a >
+                        </div >
+                        <div class="pr-4" >
                             <a class="icon-github social-button borderless"
-                               href="https://github.com/katemakescode/behind-the-web">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                               href="https://github.com/katemakescode/behind-the-web" >
+                            </a >
+                        </div >
+                    </div >
+                </div >
+            </div >
+        </div >
+    </section >
 {% endblock content %}

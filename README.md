@@ -2,19 +2,20 @@
 
 Behind the Web is a personal portfolio webpage, and wrapper for the OverTrick and Mercantile projects.
 The styling is deliberately minimalist; I'm not a web designer, and I'd rather spend my time crafting 
-back end infrastructure and business logic.
+front and back end logic.
  
 Note: the page should render adequately on both desktop and mobile, but has only been tested
-on Chrome 85 on Linux Mint. 
+on Chrome 85 and on Android. 
 
 
 ## Roadmap
-* Merchant ecommerce stub
-* scrollspy and roll up labels
-* Akismet
-* 404 and 500 pages
-* message logging
-* wider testing
+- [X] eCommerce bookstore stub
+- [ ] Bridge results stub
+- [ ] Akismet
+- [ ] Custom 404 and 500 pages
+- [ ] Message logging
+- [ ] scrollspy and roll up labels
+- [ ] Responsiveness testing on a wider range of devices
 
 
 ## Credits
