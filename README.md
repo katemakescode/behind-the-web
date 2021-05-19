@@ -10,12 +10,14 @@ on Chrome 85 and on Android.
 
 ## Roadmap
 - [X] eCommerce bookstore link
-- [ ] Bridge results link
+- [X] Bridge results link
 - [ ] Akismet
 - [ ] Custom 404 and 500 pages
 - [ ] Message logging
 - [ ] scrollspy and roll up labels
 - [ ] Responsiveness testing on a wider range of devices
+- [ ] Rework as static site hosted on S3
+- [ ] Provide contact form support using API Gateway, Lambda, and SES
 
 
 ## Credits
